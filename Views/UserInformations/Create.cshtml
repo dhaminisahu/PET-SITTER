@@ -1,0 +1,273 @@
+﻿@model furni.Controllers.UserInformation
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <style>
+        /* Body styles */
+        body {
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text color */
+            font-family: Arial, sans-serif; /* Default font */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #ff8c00; /* Orange header background */
+            color: #fff; /* White text color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #ffbf00; /* Light orange navigation background */
+            padding: 10px;
+            text-align: center;
+        }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+                nav ul li {
+                    display: inline;
+                    margin-right: 20px;
+                }
+
+                    nav ul li a {
+                        color: #fff; /* White text color for navigation links */
+                        text-decoration: none;
+                    }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #ff8c00; /* Orange footer background */
+            color: #fff; /* White text color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        <style >
+        /* Body styles */
+        body {
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text color */
+            font-family: Arial, sans-serif; /* Default font */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #ff8c00; /* Orange header background */
+            color: #fff; /* White text color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #ffbf00; /* Light orange navigation background */
+            padding: 10px;
+            text-align: center;
+        }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+                nav ul li {
+                    display: inline;
+                    margin-right: 20px;
+                }
+
+                    nav ul li a {
+                        color: #fff; /* White text color for navigation links */
+                        text-decoration: none;
+                    }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #ff8c00; /* Orange footer background */
+            color: #fff; /* White text color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Form label styles */
+        .control-label {
+            /* Orange label text color */
+            font-weight: bold; /* Bold label text */
+            margin-bottom: 10px; /* Add some space below the label */
+            display: block; /* Ensure each label appears on a new line */
+        }
+
+        /* Form input styles */
+        .form-control {
+            border: 1px solid orange; /* Orange border for input fields */
+            padding: 8px; /* Add padding to input fields */
+            border-radius: 5px; /* Rounded corners for input fields */
+            width: 100%; /* Make input fields fill their container */
+            box-sizing: border-box; /* Include padding and border in the width */
+            margin-bottom: 20px; /* Add some space below each input field */
+        }
+
+        /* Validation message styles */
+        .text-danger {
+            color: orange; /* Orange color for validation messages */
+            font-style: italic; /* Italicize validation messages */
+            margin-top: 5px; /* Add some space above validation messages */
+        }
+
+        /* Button styles */
+        .btn {
+            background-color: orange; /* Orange button background */
+            color: #fff; /* White button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #ff7f00; /* Darker orange on hover */
+            }
+            .conta
+            {
+            
+                padding:30px;
+                margin:30px;
+                border-radius:30px;
+            }
+
+        /* Additional styles for images */
+        img {
+            text-align: center;
+            margin-top: 20px;
+            margin: 10px;
+            border-radius: 50%; /* Make images round */
+            overflow: hidden;
+        }
+
+           
+
+    </style>
+
+    </style>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <div class="conta">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <form asp-controller="HomeController" asp-action="Index">
+                <button type="submit">Home</button>
+            </form>
+
+            <center><h4 style=" background-color:orange; font-size:25px;  border-radius:30px;">PET ADOPTION FORM</h4></center>
+            <div>
+                <img src="~/images/5.jpg" height="100px" width="100px" />
+
+                <img src="~/images/13.jpg" height="100px" width="100px" />
+                <img src="~/images/12.jpg" height="100px" width="100px" />
+                <img src="~/images/11.jpg" height="100px" width="100px" />
+                <img src="~/images/10.jpg" height="100px" width="100px" />
+                <img src="~/images/9.jpg" height="100px" width="100px" />
+                <img src="~/images/8.jpg" height="100px" width="100px" />
+                <img src="~/images/7.jpg" height="100px" width="100px" />
+                <img src="~/images/6.jpg" height="100px" width="100px" />
+                <img src="~/images/5.jpg" height="100px" width="100px" />
+                <img src="~/images/4.jpg" height="100px" width="100px" />
+
+
+
+            </div>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+</body>
+</html>
